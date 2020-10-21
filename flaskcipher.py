@@ -53,6 +53,7 @@ def decrypt_caesar(message):
         shifted_alphabet = alphabet[key:] + alphabet[:key]
         table = str.maketrans(alphabet, shifted_alphabet)
         return message.translate(table)
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
 
 # help from Zachary Forrest https://github.com/ZacharyForrest/caesar/blob/master/readme.md
